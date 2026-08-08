@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAISON VELA — Premium Urban Apparel & Loungewear</title>
+<meta name="description" content="Shop premium loungewear, oversized t-shirts, cozy hoodies, pyjama sets, and everyday essentials. Crafted from 100% combed cotton for ultimate comfort.">
+<meta name="keywords" content="loungewear, pyjama sets, oversized t shirts, heavy cotton tees, cozy hoodies, leggings, online clothing store, urban apparel">
+<meta property="og:title" content="MAISON VELA — Premium Urban Apparel & Loungewear">
+<meta property="og:description" content="Shop premium everyday clothing crafted for comfort. Free express shipping on orders over ₹999.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MAISON VELA — Premium Urban Apparel">
+<meta name="twitter:description" content="Premium everyday comfortwear. Free shipping on orders over ₹999.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============ DESIGN TOKENS & SYSTEM ============ */
+:root{
+  --ivory:#FBF6F4;
+  --ivory-2:#F3EBE7;
+  --charcoal:#29201E;
+  --charcoal-soft:#3D302D;
+  --stone:#94827E;
+  --stone-light:#E8DDD8;
+  --rose:#C47B80;
+  --rose-light:#DBA2A6;
+  --accent:#9E5358;
+  --white:#FFFFFF;
+  --success:#3A7045;
+
+  --font-display:'Fraunces', serif;
+  --font-body:'Inter', sans-serif;
+  --font-mono:'IBM Plex Mono', monospace;
+
+  --radius-s:3px;
+  --radius-m:6px;
+  --shadow-soft: 0 12px 40px -12px rgba(41,32,30,0.18);
+  --shadow-hard: 0 4px 16px rgba(41,32,30,0.14);
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+
+[data-theme="dark"]{
+  --ivory:#1A1413;
+  --ivory-2:#241D1B;
+  --charcoal:#FBF6F4;
+  --charcoal-soft:#F3EBE7;
+  --stone:#998783;
+  --stone-light:#423633;
+  --white:#2B211F;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-body);
+  background:var(--ivory);
+  color:var(--charcoal);
+  overflow-x:hidden;
+  transition:background .4s var(--ease), color .4s var(--ease);
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+input,textarea,select{font-family:inherit;}
+ul{list-style:none;}
+.container{max-width:1280px;margin:0 auto;padding:0 32px;}
+@media(max-width:640px){.container{padding:0 20px;}}
+
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:450;letter-spacing:-0.01em;line-height:1.08;}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--rose);
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:14px;
+}
+.eyebrow::before{content:'';width:22px;height:1.5px;background:var(--rose);}
+
+.section-head{max-width:640px;margin-bottom:48px;}
+.section-head h2{font-size:clamp(28px,4vw,44px);}
+.section-head p{color:var(--stone);margin-top:14px;font-size:15px;line-height:1.6;}
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+  outline:2px solid var(--rose);
+  outline-offset:3px;
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:15px 30px;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;
+  font-weight:600;border-radius:var(--radius-s);
+  transition:all .35s var(--ease);
+  position:relative;overflow:hidden;white-space:nowrap;
+}
+.btn-primary{background:var(--charcoal);color:var(--ivory);}
+.btn-primary:hover{background:var(--rose);color:var(--white);}
+.btn-rose{background:var(--rose);color:var(--white);}
+.btn-rose:hover{background:var(--charcoal);color:var(--ivory);}
+.btn-outline{border:1px solid var(--charcoal);color:var(--charcoal);}
+.btn-outline:hover{background:var(--charcoal);color:var(--ivory);}
+.btn-ghost{color:var(--charcoal);border-bottom:1px solid var(--charcoal);padding:6px 0;border-radius:0;}
+.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.5);transform:scale(0);animation:rip .6s var(--ease);pointer-events:none;}
+@keyframes rip{to{transform:scale(3);opacity:0;}}
+
+/* ============ ANNOUNCEMENT BAR ============ */
+.announce{
+  background:var(--charcoal);color:var(--ivory);
+  font-family:var(--font-mono);font-size:11.5px;letter-spacing:0.04em;
+  text-align:center;padding:10px 16px;position:relative;display:flex;align-items:center;justify-content:center;gap:12px;
+}
+.announce strong{color:var(--rose-light);}
+.announce .close-announce{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:16px;opacity:.6;}
+.announce .close-announce:hover{opacity:1;}
+
+/* ============ COOKIE BANNER ============ */
+.cookie-banner{
+  position:fixed;bottom:20px;left:20px;right:20px;max-width:460px;
+  background:var(--charcoal);color:var(--ivory);padding:22px;border-radius:var(--radius-m);
+  z-index:900;box-shadow:var(--shadow-soft);
+  transform:translateY(140%);transition:transform .5s var(--ease);
+}
+.cookie-banner.show{transform:translateY(0);}
+.cookie-banner p{font-size:13px;line-height:1.6;margin-bottom:14px;color:var(--stone-light);}
+.cookie-banner .row{display:flex;gap:10px;}
+.cookie-banner .btn{padding:10px 18px;font-size:11px;}
+
+/* ============ HEADER ============ */
+header{
+  position:sticky;top:0;z-index:500;background:var(--ivory);
+  border-bottom:1px solid var(--stone-light);
+  transition:background .4s var(--ease);
+}
+.progress-bar{position:fixed;top:0;left:0;height:2.5px;background:var(--rose);z-index:999;width:0%;}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;}
+.logo{font-family:var(--font-display);font-size:22px;letter-spacing:0.02em;font-weight:600;}
+.logo span{color:var(--rose);font-style:italic;}
+.logo-tag{font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);display:block;margin-top:-2px;}
+.nav-links{display:flex;gap:32px;align-items:center;}
+.nav-links a{font-size:13px;letter-spacing:0.03em;position:relative;padding:4px 0;font-weight:500;}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--rose);transition:width .3s var(--ease);}
+.nav-links a:hover::after{width:100%;}
+.nav-actions{display:flex;align-items:center;gap:18px;}
+.icon-btn{position:relative;font-size:18px;line-height:1;padding:4px;}
+.icon-btn .badge{
+  position:absolute;top:-6px;right:-8px;background:var(--rose);color:var(--white);
+  font-size:9px;font-family:var(--font-mono);width:17px;height:17px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-weight:600;
+}
+.theme-toggle{font-size:16px;}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:6px;}
+.hamburger span{width:22px;height:1.5px;background:var(--charcoal);transition:all .3s var(--ease);}
+
+.search-overlay{
+  position:fixed;inset:0;background:rgba(41,32,30,0.85);backdrop-filter:blur(6px);
+  z-index:800;display:none;align-items:flex-start;justify-content:center;padding-top:14vh;
+}
+.search-overlay.open{display:flex;}
+.search-box{width:min(640px,90vw);}
+.search-box input{
+  width:100%;background:transparent;border:none;border-bottom:1.5px solid var(--stone-light);
+  color:var(--ivory);font-family:var(--font-display);font-size:32px;padding:10px 0;
+}
+.search-box input::placeholder{color:var(--stone);}
+.search-close{color:var(--ivory);margin-top:16px;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;opacity:.7;}
+.search-results{margin-top:24px;display:flex;flex-direction:column;gap:10px;max-height:45vh;overflow:auto;}
+.search-result-item{display:flex;justify-content:space-between;color:var(--ivory);font-size:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);}
+.search-result-item:hover{color:var(--rose-light);cursor:pointer;}
+
+@media(max-width:920px){
+  .nav-links{position:fixed;top:0;right:0;height:100vh;width:min(320px,80vw);background:var(--ivory);
+    flex-direction:column;justify-content:center;align-items:flex-start;padding:40px;gap:26px;
+    transform:translateX(100%);transition:transform .4s var(--ease);box-shadow:var(--shadow-soft);z-index:700;}
+  .nav-links.open{transform:translateX(0);}
+  .hamburger{display:flex;}
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;min-height:90vh;display:flex;align-items:center;
+  padding:60px 32px;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:radial-gradient(circle at 80% 30%, rgba(196, 123, 128, 0.18) 0%, transparent 60%), linear-gradient(135deg, var(--ivory) 0%, var(--ivory-2) 100%);
+}
+[data-theme="dark"] .hero-bg{
+  background:radial-gradient(circle at 80% 30%, rgba(196, 123, 128, 0.28) 0%, transparent 60%), linear-gradient(135deg, var(--ivory) 0%, var(--ivory-2) 100%);
+}
+.hero-inner{position:relative;z-index:1;max-width:1280px;margin:0 auto;width:100%;}
+.hero-content{max-width:600px;}
+.hero-content h1{font-size:clamp(38px,5.5vw,68px);opacity:0;animation:rise .9s var(--ease) .1s forwards;}
+.hero-content h1 em{font-style:italic;color:var(--rose);}
+.hero-sub{font-size:15px;letter-spacing:0.03em;color:var(--stone);margin:22px 0 34px;opacity:0;animation:rise .9s var(--ease) .3s forwards;line-height:1.6;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:rise .9s var(--ease) .5s forwards;}
+@keyframes rise{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.hero-scroll{position:absolute;bottom:20px;left:32px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;color:var(--stone);display:flex;align-items:center;gap:10px;}
+.hero-scroll::after{content:'';width:1px;height:38px;background:var(--stone);animation:scrolldown 1.8s infinite;}
+@keyframes scrolldown{0%{opacity:0;transform:scaleY(0);transform-origin:top;}50%{opacity:1;transform:scaleY(1);transform-origin:top;}100%{opacity:0;transform:scaleY(1);transform-origin:bottom;}}
+@media(max-width:900px){.hero-bg{background:radial-gradient(circle at 50% 30%, rgba(196, 123, 128, 0.2) 0%, transparent 70%), linear-gradient(180deg, var(--ivory) 0%, var(--ivory-2) 100%);} .hero{min-height:85vh;align-items:flex-end;padding-bottom:80px;}}
+
+/* ============ MARQUEE STRIP ============ */
+.marquee-strip{
+  border-top:1px solid var(--stone-light);border-bottom:1px solid var(--stone-light);
+  padding:16px 0;overflow:hidden;white-space:nowrap;background:var(--ivory-2);
+}
+.marquee-track{display:inline-flex;gap:40px;animation:marquee 28s linear infinite;}
+.marquee-track span{font-family:var(--font-mono);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);}
+.marquee-track span::after{content:'✦';margin-left:40px;color:var(--rose);}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ============ SECTIONS ============ */
+section{padding:90px 0;}
+@media(max-width:640px){section{padding:65px 0;}}
+
+/* ============ CATEGORIES ============ */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+@media(max-width:1000px){.cat-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.cat-grid{grid-template-columns:1fr;}}
+.cat-card{
+  position:relative;border-radius:var(--radius-m);overflow:hidden;aspect-ratio:3/4;
+  cursor:pointer;
+}
+.cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease);}
+.cat-card:hover img{transform:scale(1.08);}
+.cat-overlay{
+  position:absolute;inset:0;background:linear-gradient(0deg, rgba(30,22,20,0.85) 0%, rgba(30,22,20,0.08) 60%);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff;
+}
+.cat-overlay .num{font-family:var(--font-mono);font-size:11px;color:var(--rose-light);margin-bottom:6px;}
+.cat-overlay h3{font-size:20px;color:#fff;margin-bottom:6px;}
+.cat-overlay p{font-size:12.5px;color:rgba(255,255,255,0.78);margin-bottom:14px;line-height:1.4;}
+.cat-overlay .btn{padding:10px 18px;font-size:10.5px;background:rgba(255,255,255,0.14);color:#fff;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3);}
+.cat-overlay .btn:hover{background:var(--rose);border-color:var(--rose);}
+
+/* ============ TOOLBAR ============ */
+.shop-toolbar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--stone-light);}
+.filter-group{display:flex;flex-wrap:wrap;gap:10px;}
+.filter-group select, .filter-group input[type="text"]{
+  padding:10px 14px;border:1px solid var(--stone-light);background:var(--ivory);color:var(--charcoal);
+  font-size:12.5px;border-radius:var(--radius-s);min-width:140px;
+}
+.results-count{font-family:var(--font-mono);font-size:11px;color:var(--stone);}
+
+/* ============ PRODUCT GRID ============ */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px 20px;}
+@media(max-width:1100px){.product-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:760px){.product-grid{grid-template-columns:repeat(2,1fr);gap:16px 12px;}}
+.product-card{position:relative;background:var(--ivory-2);border-radius:var(--radius-m);padding:10px;border:1px solid var(--stone-light);transition:transform .3s var(--ease), box-shadow .3s;}
+.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft);}
+.product-media{position:relative;aspect-ratio:3/4;border-radius:var(--radius-s);overflow:hidden;background:var(--ivory);}
+.product-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
+.product-card:hover .product-media img{transform:scale(1.06);}
+
+.badge-tag{position:absolute;top:10px;left:10px;font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.06em;padding:4px 8px;border-radius:2px;text-transform:uppercase;font-weight:600;z-index:2;}
+.badge-new{background:var(--charcoal);color:var(--ivory);}
+.badge-sale{background:#B5473F;color:#fff;}
+.badge-best{background:var(--rose);color:#fff;}
+
+.wishlist-btn{
+  position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center;font-size:15px;z-index:2;
+  transition:transform .25s var(--ease), background .25s;
+}
+[data-theme="dark"] .wishlist-btn{background:rgba(36,29,27,0.85);}
+.wishlist-btn:hover{transform:scale(1.12);}
+.wishlist-btn.active{color:#B5473F;}
+
+.product-quickactions{
+  position:absolute;left:0;right:0;bottom:0;display:flex;gap:1px;
+  transform:translateY(100%);transition:transform .35s var(--ease);z-index:2;
+}
+.product-card:hover .product-quickactions{transform:translateY(0);}
+.product-quickactions button{flex:1;padding:12px 6px;background:var(--charcoal);color:var(--ivory);font-size:10.5px;letter-spacing:0.05em;text-transform:uppercase;font-weight:600;}
+.product-quickactions button:hover{background:var(--rose);}
+
+.product-info{padding:14px 4px 4px;}
+.product-info .cat-label{font-family:var(--font-mono);font-size:10px;color:var(--rose);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;}
+.product-info h4{font-size:15.5px;font-weight:600;margin:4px 0 6px;font-family:var(--font-body);}
+.price-row{display:flex;align-items:center;gap:8px;margin-top:6px;}
+.price{font-family:var(--font-mono);font-size:15px;font-weight:600;color:var(--charcoal);}
+.price-old{font-family:var(--font-mono);font-size:12.5px;color:var(--stone);text-decoration:line-through;}
+.rating{font-size:11px;color:var(--rose);letter-spacing:1px;margin-left:auto;}
+.swatches{display:flex;gap:6px;margin-top:10px;}
+.swatch{width:15px;height:15px;border-radius:50%;border:1px solid var(--stone-light);cursor:pointer;}
+.swatch.selected{outline:1.5px solid var(--charcoal);outline-offset:2px;}
+
+.section-cta{text-align:center;margin-top:48px;}
+
+/* ============ MODAL / QUICK VIEW ============ */
+.modal-backdrop{position:fixed;inset:0;background:rgba(25,18,17,0.75);backdrop-filter:blur(4px);z-index:850;display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-backdrop.open{display:flex;}
+.modal{background:var(--ivory);max-width:840px;width:100%;max-height:90vh;overflow:auto;border-radius:var(--radius-m);display:grid;grid-template-columns:1fr 1.1fr;position:relative;box-shadow:var(--shadow-soft);}
+@media(max-width:720px){.modal{grid-template-columns:1fr;}}
+.modal-close{position:absolute;top:14px;right:14px;font-size:22px;z-index:3;width:36px;height:36px;background:var(--ivory-2);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.modal-img{aspect-ratio:3/4;overflow:hidden;background:var(--ivory-2);}
+.modal-img img{width:100%;height:100%;object-fit:cover;}
+.modal-body{padding:36px 30px;}
+.modal-body h3{font-size:24px;margin-bottom:8px;}
+.modal-body .price-row{margin:12px 0 16px;justify-content:flex-start;gap:12px;}
+.modal-body p.desc{font-size:13.5px;color:var(--stone);line-height:1.7;margin-bottom:20px;}
+
+.option-label{font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;color:var(--stone);}
+.size-options{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
+.size-opt{width:42px;height:38px;border:1px solid var(--stone-light);display:flex;align-items:center;justify-content:center;font-size:12px;border-radius:var(--radius-s);font-family:var(--font-mono);}
+.size-opt.selected{background:var(--charcoal);color:var(--ivory);border-color:var(--charcoal);}
+.qty-selector{display:flex;align-items:center;gap:0;border:1px solid var(--stone-light);width:fit-content;margin-bottom:22px;}
+.qty-selector button{width:40px;height:38px;font-size:16px;}
+.qty-selector span{width:45px;text-align:center;font-family:var(--font-mono);font-weight:600;}
+
+/* ============ CART DRAWER ============ */
+.cart-drawer{position:fixed;top:0;right:0;height:100vh;width:min(440px,94vw);background:var(--ivory);z-index:900;transform:translateX(100%);transition:transform .45s var(--ease);box-shadow:var(--shadow-soft);display:flex;flex-direction:column;}
+.cart-drawer.open{transform:translateX(0);}
+.cart-head{display:flex;justify-content:space-between;align-items:center;padding:24px;border-bottom:1px solid var(--stone-light);}
+.cart-items{flex:1;overflow:auto;padding:16px 24px;}
+.cart-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--stone-light);}
+.cart-item img{width:68px;height:84px;object-fit:cover;border-radius:3px;}
+.cart-item-info{flex:1;}
+.cart-item-info h5{font-size:13.5px;margin-bottom:4px;font-weight:600;}
+.cart-item-info .meta{font-size:11.5px;color:var(--stone);margin-bottom:6px;font-family:var(--font-mono);}
+.cart-item-qty{display:flex;align-items:center;gap:8px;}
+.cart-item-qty button{width:24px;height:24px;border:1px solid var(--stone-light);font-size:12px;}
+.remove-item{font-size:11px;color:#B5473F;margin-left:auto;text-decoration:underline;}
+.cart-empty{text-align:center;padding:60px 20px;color:var(--stone);}
+.cart-foot{padding:24px;border-top:1px solid var(--stone-light);}
+.coupon-row{display:flex;gap:8px;margin-bottom:16px;}
+.coupon-row input{flex:1;padding:10px 12px;border:1px solid var(--stone-light);background:transparent;font-size:12.5px;border-radius:var(--radius-s);}
+.cart-total-row{display:flex;justify-content:space-between;font-family:var(--font-mono);margin-bottom:16px;font-size:15px;font-weight:600;}
+.overlay-dim{position:fixed;inset:0;background:rgba(25,18,17,0.55);z-index:890;display:none;}
+.overlay-dim.open{display:block;}
+
+/* ============ WHY CHOOSE US ============ */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--stone-light);border:1px solid var(--stone-light);}
+@media(max-width:760px){.why-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.why-grid{grid-template-columns:1fr;}}
+.why-item{background:var(--ivory);padding:40px 28px;}
+.why-item .ic{font-size:28px;margin-bottom:18px;}
+.why-item h4{font-size:16.5px;margin-bottom:8px;font-family:var(--font-body);font-weight:600;}
+.why-item p{font-size:13px;color:var(--stone);line-height:1.6;}
+
+/* ============ STATS ============ */
+.stats-band{background:var(--charcoal);color:var(--ivory);padding:70px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
+@media(max-width:700px){.stats-grid{grid-template-columns:repeat(2,1fr);}}
+.stat-num{font-family:var(--font-display);font-size:clamp(32px,4vw,54px);color:var(--rose-light);}
+.stat-label{font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--stone-light);margin-top:8px;}
+
+/* ============ TESTIMONIALS ============ */
+.testi-wrap{max-width:760px;margin:0 auto;text-align:center;position:relative;min-height:220px;}
+.testi-slide{display:none;animation:fadein .6s var(--ease);}
+.testi-slide.active{display:block;}
+@keyframes fadein{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.testi-stars{color:var(--rose);letter-spacing:3px;margin-bottom:20px;font-size:15px;}
+.testi-quote{font-family:var(--font-display);font-size:clamp(18px,2.4vw,26px);font-style:italic;line-height:1.5;margin-bottom:24px;}
+.testi-name{font-family:var(--font-mono);font-size:12px;letter-spacing:0.06em;color:var(--stone);}
+.testi-dots{display:flex;justify-content:center;gap:8px;margin-top:32px;}
+.testi-dots span{width:7px;height:7px;border-radius:50%;background:var(--stone-light);cursor:pointer;}
+.testi-dots span.active{background:var(--rose);}
+
+/* ============ SIZE GUIDE TABLE ============ */
+.size-table{width:100%;border-collapse:collapse;font-size:13px;}
+.size-table th,.size-table td{padding:14px;text-align:center;border:1px solid var(--stone-light);}
+.size-table th{font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;background:var(--ivory-2);text-transform:uppercase;}
+.table-scroll{overflow-x:auto;}
+
+/* ============ FAQ ============ */
+.faq-item{border-bottom:1px solid var(--stone-light);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 4px;font-size:15px;font-weight:600;}
+.faq-q .plus{transition:transform .3s var(--ease);font-size:18px;color:var(--rose);}
+.faq-item.open .plus{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);}
+.faq-a p{padding:0 4px 22px;font-size:13.5px;color:var(--stone);line-height:1.7;}
+
+/* ============ FORMS ============ */
+.form-card{background:var(--ivory-2);padding:40px;border-radius:var(--radius-m);border:1px solid var(--stone-light);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr;}}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field.full{grid-column:1/-1;}
+.field label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--stone);font-weight:600;}
+.field input,.field select,.field textarea{
+  padding:12px 14px;border:1px solid var(--stone-light);background:var(--ivory);color:var(--charcoal);font-size:13.5px;border-radius:var(--radius-s);
+}
+.field input.invalid,.field textarea.invalid{border-color:#B5473F;}
+.error-msg{font-size:11px;color:#B5473F;display:none;}
+.error-msg.show{display:block;}
+.form-success{display:none;background:var(--success);color:#fff;padding:14px 18px;border-radius:var(--radius-s);font-size:13px;margin-top:16px;}
+.form-success.show{display:block;}
+
+/* ============ FOOTER ============ */
+footer{background:var(--ivory-2);padding:80px 0 30px;border-top:1px solid var(--stone-light);}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:60px;}
+@media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr;}}
+.footer-grid h5{font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:18px;color:var(--rose);}
+.footer-grid li{margin-bottom:10px;font-size:13.5px;}
+.footer-grid li a:hover{color:var(--rose);}
+.footer-social{display:flex;gap:14px;margin-top:20px;}
+.footer-social a{width:34px;height:34px;border:1px solid var(--stone-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-family:var(--font-mono);}
+.footer-social a:hover{background:var(--charcoal);color:var(--ivory);}
+.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:26px;border-top:1px solid var(--stone-light);font-size:12px;color:var(--stone);}
+
+/* ============ FLOATING BUTTONS ============ */
+.float-stack{position:fixed;right:22px;bottom:24px;display:flex;flex-direction:column;gap:12px;z-index:600;}
+.float-btn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:var(--shadow-hard);transition:transform .3s var(--ease);}
+.float-btn:hover{transform:scale(1.08);}
+.float-wa{background:#25D366;color:#fff;}
+.float-call{background:var(--charcoal);color:var(--ivory);}
+.float-top{background:var(--rose);color:#fff;opacity:0;pointer-events:none;transition:opacity .3s;}
+.float-top.show{opacity:1;pointer-events:auto;}
+
+/* ============ LOADER & REVEALS ============ */
+.page-loader{position:fixed;inset:0;background:var(--ivory);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity .6s var(--ease), visibility .6s;}
+.page-loader.hide{opacity:0;visibility:hidden;}
+.loader-mark{font-family:var(--font-display);font-style:italic;font-size:28px;letter-spacing:0.02em;position:relative;}
+.loader-mark::after{content:'';position:absolute;left:0;bottom:-8px;height:1.5px;width:100%;background:var(--stone-light);}
+.loader-mark::before{content:'';position:absolute;left:0;bottom:-8px;height:1.5px;width:0%;background:var(--rose);animation:load 1.2s var(--ease) forwards;}
+@keyframes load{to{width:100%;}}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--charcoal);color:var(--ivory);
+  padding:14px 24px;border-radius:var(--radius-s);font-size:13px;z-index:1000;opacity:0;pointer-events:none;transition:all .35s var(--ease);}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE LOADER ============ -->
+<div class="page-loader" id="pageLoader"><div class="loader-mark">MAISON VELA STORE</div></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="announce" id="announceBar">
+  <span>✨ <strong>New Festive Drop Live</strong> · Free Express Shipping on orders over ₹999 · Use code <strong>VELA10</strong> for 10% Off</span>
+  <button class="close-announce" onclick="document.getElementById('announceBar').style.display='none'" aria-label="Dismiss announcement">✕</button>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="#home" class="logo">
+      MAISON <span>VELA</span>
+      <span class="logo-tag">Urban Apparel &amp; Loungewear</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#shop">Shop All</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#about">Why Vela</a></li>
+      <li><a href="#sizeguide">Fit Guide</a></li>
+      <li><a href="#contact">Support</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+      <button class="icon-btn" id="searchOpen" aria-label="Search">⚲</button>
+      <button class="icon-btn" id="wishlistOpenNav" aria-label="Wishlist">♡<span class="badge" id="wishBadge">0</span></button>
+      <button class="icon-btn" id="cartOpen" aria-label="Open Shopping Bag">🛍<span class="badge" id="cartBadge">0</span></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ SEARCH OVERLAY ============ -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search pyjamas, oversized tees, hoodies, leggings…" aria-label="Search store">
+    <div class="search-results" id="searchResults"></div>
+    <button class="search-close" id="searchClose">Close ✕</button>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="eyebrow">Everyday Luxury</div>
+      <h1>Comfort &amp; Style <em>Reimagined</em></h1>
+      <p class="hero-sub">Ultra-soft loungewear, 220 GSM heavyweight tees, and cozy fleece hoodies. Crafted from 100% combed cotton designed for effortless off-duty living.</p>
+      
+      <div class="hero-actions">
+        <a href="#shop" class="btn btn-rose">Shop New Drop</a>
+        <a href="#categories" class="btn btn-outline">Explore Categories</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">SCROLL</div>
+</section>
+
+<div class="marquee-strip">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- ============ CATEGORIES ============ -->
+<section id="categories">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Shop by Category</div>
+      <h2>Engineered for ultimate comfort</h2>
+      <p>Six distinct edits designed around your day off-duty — from morning coffee runs to late-night lounging.</p>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- ============ SHOP ALL PRODUCTS ============ -->
+<section id="shop">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Full Collection</div>
+      <h2>Featured Pieces</h2>
+      <p>Filter by style, price, or size. Select your favorite fit and order directly online or via WhatsApp.</p>
+    </div>
+
+    <!-- TOOLBAR FILTERS -->
+    <div class="shop-toolbar reveal">
+      <div class="filter-group">
+        <select id="filterCategory" aria-label="Filter by Category">
+          <option value="">All Categories</option>
+        </select>
+        <select id="filterPrice" aria-label="Filter by Price">
+          <option value="">All Prices</option>
+          <option value="0-599">Under ₹599</option>
+          <option value="600-999">₹600 – ₹999</option>
+          <option value="1000-9999">₹1,000 &amp; Above</option>
+        </select>
+        <select id="filterSize" aria-label="Filter by Size">
+          <option value="">All Sizes</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <select id="filterAvailability" aria-label="Filter Availability">
+          <option value="">All Items</option>
+          <option value="in">In Stock</option>
+          <option value="out">Restocking Soon</option>
+        </select>
+      </div>
+      <div class="results-count" id="resultsCount">— products</div>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="product-grid" id="productGrid"></div>
+    <div class="section-cta"><button class="btn btn-outline" id="loadMoreBtn">Load More Styles</button></div>
+
+    <div class="recently-viewed" id="recentlyViewedWrap" style="display:none;margin-top:70px;">
+      <div class="section-head reveal"><div class="eyebrow">Recently viewed</div><h2 style="font-size:26px;">Pick up where you left off</h2></div>
+      <div class="product-grid" id="recentlyViewedGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why Maison Vela</div>
+      <h2>Six reasons you'll love your order</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item"><div class="ic">🧵</div><h4>100% Combed Cotton</h4><p>Breathable modal-cotton blends tested for 100+ washes without pilling or fading.</p></div>
+      <div class="why-item"><div class="ic">🚚</div><h4>Free Express Shipping</h4><p>Dispatched within 24 hours. Delivered to most metro cities in 2 to 4 days.</p></div>
+      <div class="why-item"><div class="ic">↺</div><h4>7-Day Easy Returns</h4><p>Hassle-free 7-day returns &amp; exchanges on unworn pieces with tags intact.</p></div>
+      <div class="why-item"><div class="ic">🏷️</div><h4>Fair Pricing</h4><p>Direct-to-consumer pricing — no middleman markups between our workshop and your wardrobe.</p></div>
+      <div class="why-item"><div class="ic">🔒</div><h4>Secure Checkout</h4><p>Instant UPI, credit cards, net banking, and Cash on Delivery (COD) options.</p></div>
+      <div class="why-item"><div class="ic">💬</div><h4>WhatsApp Instant Support</h4><p>Real human assistance on WhatsApp for size recommendations &amp; order tracking.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div><div class="stat-num" data-count="34000">0</div><div class="stat-label">Happy Customers</div></div>
+      <div><div class="stat-num" data-count="98">0</div><div class="stat-label">Unique Styles</div></div>
+      <div><div class="stat-num" data-count="52000">0</div><div class="stat-label">Orders Delivered</div></div>
+      <div><div class="stat-num" data-count="49">0</div><div class="stat-label">Customer Rating (4.9★)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section>
+  <div class="container">
+    <div class="section-head reveal" style="margin:0 auto 48px;text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Customer Reviews</div>
+      <h2>Loved by 30,000+ shoppers</h2>
+    </div>
+    <div class="testi-wrap" id="testiWrap"></div>
+  </div>
+</section>
+
+<!-- ============ SIZE GUIDE ============ -->
+<section id="sizeguide">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Fit Reference</div><h2>Size &amp; measurement guide (Inches)</h2></div>
+    <div class="table-scroll reveal">
+      <table class="size-table">
+        <thead><tr><th>Size</th><th>Bust / Chest (in)</th><th>Waist (in)</th><th>Hip (in)</th><th>Tee Length (in)</th></tr></thead>
+        <tbody>
+          <tr><td>XS</td><td>32 – 34</td><td>25 – 27</td><td>34 – 36</td><td>26.5</td></tr>
+          <tr><td>S</td><td>34 – 36</td><td>27 – 29</td><td>36 – 38</td><td>27.5</td></tr>
+          <tr><td>M</td><td>36 – 38</td><td>29 – 31</td><td>38 – 40</td><td>28.5</td></tr>
+          <tr><td>L</td><td>38 – 40</td><td>31 – 33</td><td>40 – 42</td><td>29.5</td></tr>
+          <tr><td>XL</td><td>40 – 42</td><td>33 – 35</td><td>42 – 44</td><td>30.5</td></tr>
+          <tr><td>XXL</td><td>42 – 44</td><td>35 – 37</td><td>44 – 46</td><td>31.5</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Got Questions?</div><h2>Frequently asked questions</h2></div>
+    <div id="faqList"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / SUPPORT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Customer Support</div><h2>We're here to help</h2></div>
+    <div class="contact-grid reveal">
+      <div>
+        <ul class="contact-list">
+          <li><span class="ic">💬</span><div><h5>WhatsApp Care</h5>+91 90802 96479</div></li>
+          <li><span class="ic">✉</span><div><h5>Email Us</h5>support@maisonvela.com</div></li>
+          <li><span class="ic">📍</span><div><h5>Studio Address</h5>44 Residency Road, Bengaluru, Karnataka 560025</div></li>
+          <li><span class="ic">🕐</span><div><h5>Hours</h5>Mon–Sat, 10 AM – 7 PM IST</div></li>
+        </ul>
+        <form id="contactForm" novalidate style="margin-top:26px;">
+          <div class="form-grid">
+            <div class="field"><label for="ctName">Your Name *</label><input id="ctName" required><span class="error-msg">Please enter your name</span></div>
+            <div class="field"><label for="ctEmail">Email Address *</label><input id="ctEmail" type="email" required><span class="error-msg">Please enter a valid email</span></div>
+            <div class="field full"><label for="ctMsg">How can we help? *</label><textarea id="ctMsg" rows="3" required></textarea><span class="error-msg">Please enter a message</span></div>
+          </div>
+          <button class="btn btn-primary" style="margin-top:18px;" type="submit">Send Message</button>
+          <div class="form-success" id="ctSuccess">Message sent — our care team will reply within 2 hours.</div>
+        </form>
+      </div>
+      <div class="form-card" style="display:flex;flex-direction:column;justify-content:center;text-align:center;padding:40px;background:var(--charcoal);color:var(--ivory);">
+        <h3 style="color:var(--rose-light);font-size:26px;margin-bottom:14px;">Need Help Picking Your Size?</h3>
+        <p style="color:var(--stone-light);font-size:14px;line-height:1.6;margin-bottom:24px;">Message our stylists directly on WhatsApp for real-time sizing advice and stock availability.</p>
+        <a href="https://wa.me/919080296479?text=Hi%20Maison%20Vela%2C%20I'd%20like%20help%20choosing%20my%20size" target="_blank" class="btn btn-rose" style="width:fit-content;margin:0 auto;">Chat with Stylist on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="logo">MAISON <span>VELA</span></a>
+        <p style="margin-top:16px;font-size:13px;color:var(--stone);max-width:300px;line-height:1.7;">Premium everyday urban clothing &amp; loungewear designed in Bengaluru. Comfort without compromise.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h5>Shop</h5>
+        <ul><li><a href="#shop">Pyjama Sets</a></li><li><a href="#shop">Oversized Tees</a></li><li><a href="#shop">Hoodies</a></li><li><a href="#shop">Leggings</a></li></ul>
+      </div>
+      <div>
+        <h5>Help</h5>
+        <ul><li><a href="#sizeguide">Size Guide</a></li><li><a href="#faq-shipping">Shipping Policy</a></li><li><a href="#faq-returns">Returns &amp; Exchange</a></li></ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul><li><a href="#about">About Us</a></li><li><a href="#contact">Contact Support</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maison Vela Retail Co. All rights reserved.</span>
+      <span>Express Shipping Across India</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay-dim" id="overlayDim"></div>
+<div class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Shopping Bag">
+  <div class="cart-head">
+    <h3 style="font-size:18px;">Your Shopping Bag</h3>
+    <button id="cartClose" aria-label="Close cart" style="font-size:20px;">✕</button>
+  </div>
+  <div class="cart-items" id="cartItemsWrap"></div>
+  <div class="cart-foot">
+    <div class="coupon-row">
+      <input type="text" id="couponInput" placeholder="Coupon code (e.g. VELA10)">
+      <button class="btn btn-outline" id="applyCoupon" style="padding:10px 14px;font-size:11px;">Apply</button>
+    </div>
+    <div class="cart-total-row"><span>Total Amount</span><span id="cartTotal">₹0</span></div>
+    <button class="btn btn-rose" style="width:100%;margin-bottom:10px;" id="checkoutBtn">Order via WhatsApp Checkout</button>
+    <button class="btn btn-ghost" style="width:100%;text-align:center;justify-content:center;" id="clearCartBtn">Clear Bag</button>
+  </div>
+</div>
+
+<!-- ============ WISHLIST DRAWER ============ -->
+<div class="cart-drawer" id="wishDrawer" role="dialog" aria-label="Saved Items" style="right:0;">
+  <div class="cart-head"><h3 style="font-size:18px;">Saved Items</h3><button id="wishClose" aria-label="Close wishlist" style="font-size:20px;">✕</button></div>
+  <div class="cart-items" id="wishItemsWrap"></div>
+</div>
+
+<!-- ============ QUICK VIEW MODAL ============ -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<!-- ============ FLOATING BUTTONS ============ -->
+<div class="float-stack">
+  <a class="float-btn float-top" id="floatTop" aria-label="Scroll to top" href="#home">↑</a>
+  <a class="float-btn float-wa" aria-label="WhatsApp Support" href="https://wa.me/919080296479?text=Hi%20Maison%20Vela%2C%20I%20have%20a%20question%20about%20my%20order" target="_blank" rel="noopener">💬</a>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<script>
+/* =====================================================
+   MAISON VELA — B2C RETAIL STOREFRONT ENGINE
+   ===================================================== */
+(function(){
+"use strict";
+
+/* ---------- CATEGORIES ---------- */
+const CATEGORIES = [
+  {id:'women-pyjamas', name:"Women's Pyjama Sets", img:'https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=500&q=70', desc:'Ultra-soft 100% cotton matching lounge sets.'},
+  {id:'oversized-tees', name:'Heavyweight Oversized Tees', img:'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&q=70', desc:'220 GSM streetwear drop-shoulder fit.'},
+  {id:'hoodies-sweats', name:'Cozy Hoodies & Sweatshirts', img:'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500&q=70', desc:'300 GSM fleece loopknit for all-day warmth.'},
+  {id:'leggings', name:'Ribbed Leggings & Capris', img:'https://images.unsplash.com/photo-1506629905607-c60f6f6a2d1b?w=500&q=70', desc:'4-way stretch breathable comfortwear.'},
+  {id:'joggers', name:'Unisex Relaxed Joggers', img:'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=500&q=70', desc:'Deep pockets & adjustable drawstring waist.'},
+  {id:'night-pants', name:'Cotton Lounge Pants', img:'https://images.unsplash.com/photo-1548883354-7622d03aca27?w=500&q=70', desc:'Lightweight breezy pants for deep sleep.'}
+];
+
+const COLORS = [
+  {name:'Soft Ivory', hex:'#F4EFEA'},
+  {name:'Deep Charcoal', hex:'#221C1A'},
+  {name:'Muted Rose', hex:'#C47B80'},
+  {name:'Sage Green', hex:'#7A8B74'},
+  {name:'Midnight Navy', hex:'#202B3C'}
+];
+const SIZES = ['XS','S','M','L','XL','XXL'];
+
+/* ---------- PRODUCTS DATA (B2C RETAIL) ---------- */
+const PRODUCTS = [
+  {
+    id: 'p1',
+    name: 'Waverly Soft Cotton Pyjama Set',
+    category: 'women-pyjamas',
+    categoryName: "Women's Pyjamas",
+    price: 899,
+    oldPrice: 1199,
+    rating: '4.9',
+    sizes: ['XS','S','M','L','XL'],
+    colors: ['#F4EFEA','#C47B80','#7A8B74'],
+    img: 'https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1622290291165-d5e0d1a0b6e5?w=800&auto=format&fit=crop&q=80',
+    badge: 'best',
+    inStock: true,
+    desc: 'Crafted from super-soft 100% combed cotton. Includes a button-down notch collar shirt and relaxed elastic waist pyjama pants.'
+  },
+  {
+    id: 'p2',
+    name: '220 GSM Heavyweight Oversized Tee',
+    category: 'oversized-tees',
+    categoryName: 'Oversized Tees',
+    price: 699,
+    oldPrice: 899,
+    rating: '5.0',
+    sizes: ['S','M','L','XL','XXL'],
+    colors: ['#221C1A','#F4EFEA','#202B3C'],
+    img: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop&q=80',
+    badge: 'new',
+    inStock: true,
+    desc: 'Thick 220 GSM Single Jersey cotton. Drop shoulder streetwear silhouette with a thick 1-inch rib collar.'
+  },
+  {
+    id: 'p3',
+    name: 'CloudFleece Pullover Hoodie',
+    category: 'hoodies-sweats',
+    categoryName: 'Hoodies & Sweats',
+    price: 1299,
+    oldPrice: 1599,
+    rating: '4.9',
+    sizes: ['S','M','L','XL','XXL'],
+    colors: ['#221C1A','#C47B80','#7A8B74'],
+    img: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop&q=80',
+    badge: 'sale',
+    inStock: true,
+    desc: '300 GSM French Terry loopknit hoodie with double-lined hood and spacious kangaroo pocket. Ultra-cozy brushed interior.'
+  },
+  {
+    id: 'p4',
+    name: 'Ribbed High-Waist Seamless Leggings',
+    category: 'leggings',
+    categoryName: 'Leggings',
+    price: 599,
+    oldPrice: 799,
+    rating: '4.8',
+    sizes: ['XS','S','M','L','XL'],
+    colors: ['#221C1A','#C47B80','#202B3C'],
+    img: 'https://images.unsplash.com/photo-1506629905607-c60f6f6a2d1b?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&auto=format&fit=crop&q=80',
+    badge: 'best',
+    inStock: true,
+    desc: 'Non-see-through ribbed cotton spandex fabric. High-rise supportive waistband that hugs without digging in.'
+  },
+  {
+    id: 'p5',
+    name: 'Linden Relaxed Cotton Lounge Pants',
+    category: 'joggers',
+    categoryName: 'Lounge Pants',
+    price: 749,
+    oldPrice: 949,
+    rating: '4.7',
+    sizes: ['S','M','L','XL','XXL'],
+    colors: ['#221C1A','#F4EFEA','#7A8B74'],
+    img: 'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800&auto=format&fit=crop&q=80',
+    badge: null,
+    inStock: true,
+    desc: 'Lightweight breathable cotton night pants featuring deep side pockets and soft elasticated waistband.'
+  },
+  {
+    id: 'p6',
+    name: 'Minimalist Blank Crewneck Tee',
+    category: 'oversized-tees',
+    categoryName: 'T-Shirts',
+    price: 499,
+    oldPrice: 649,
+    rating: '4.8',
+    sizes: ['S','M','L','XL'],
+    colors: ['#F4EFEA','#221C1A','#C47B80'],
+    img: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80',
+    badge: 'new',
+    inStock: true,
+    desc: 'Everyday 180 GSM bio-washed cotton t-shirt. Pre-shrunk fabric with classic tailored fit.'
+  },
+  {
+    id: 'p7',
+    name: 'Flora Printed Short Pyjama Set',
+    category: 'women-pyjamas',
+    categoryName: "Women's Pyjamas",
+    price: 799,
+    oldPrice: 999,
+    rating: '4.9',
+    sizes: ['XS','S','M','L'],
+    colors: ['#C47B80','#F4EFEA'],
+    img: 'https://images.unsplash.com/photo-1622290291165-d5e0d1a0b6e5?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=800&auto=format&fit=crop&q=80',
+    badge: 'sale',
+    inStock: true,
+    desc: 'Cute printed cotton short set with piping detail. Soft breathable fabric designed for tropical climates.'
+  },
+  {
+    id: 'p8',
+    name: 'Heavyweight Fleece Crewneck Sweatshirt',
+    category: 'hoodies-sweats',
+    categoryName: 'Sweatshirts',
+    price: 1099,
+    oldPrice: 1399,
+    rating: '4.8',
+    sizes: ['S','M','L','XL','XXL'],
+    colors: ['#202B3C','#221C1A','#7A8B74'],
+    img: 'https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&auto=format&fit=crop&q=80',
+    badge: 'best',
+    inStock: true,
+    desc: 'Clean minimal crewneck sweatshirt in 300 GSM fleece cotton. Ribbed collar, cuffs, and hem.'
+  },
+  {
+    id: 'p9',
+    name: 'Soft Ribbed Fitted Crop Top',
+    category: 'oversized-tees',
+    categoryName: 'Crop Tops',
+    price: 449,
+    oldPrice: 599,
+    rating: '4.9',
+    sizes: ['XS','S','M','L'],
+    colors: ['#F4EFEA','#221C1A','#C47B80'],
+    img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&auto=format&fit=crop&q=80',
+    badge: 'new',
+    inStock: true,
+    desc: 'Soft fine-ribbed cotton crop top with 4-way stretch. Double-stitched neckline and hem.'
+  },
+  {
+    id: 'p10',
+    name: 'Striped Knit Polo Shirt',
+    category: 'oversized-tees',
+    categoryName: 'Polos',
+    price: 799,
+    oldPrice: 999,
+    rating: '4.7',
+    sizes: ['M','L','XL','XXL'],
+    colors: ['#202B3C','#F4EFEA'],
+    img: 'https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1625910513413-562725b7b901?w=800&auto=format&fit=crop&q=80',
+    badge: null,
+    inStock: true,
+    desc: 'Classic yarn-dyed striped knit polo shirt. Soft combed cotton fabric with ribbed collar.'
+  },
+  {
+    id: 'p11',
+    name: 'Heavyweight Zip-Up Hoodie',
+    category: 'hoodies-sweats',
+    categoryName: 'Hoodies',
+    price: 1399,
+    oldPrice: 1699,
+    rating: '5.0',
+    sizes: ['S','M','L','XL','XXL'],
+    colors: ['#221C1A','#202B3C'],
+    img: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80',
+    badge: 'best',
+    inStock: true,
+    desc: 'Full zip-up fleece hoodie featuring YKK front zip and deep pockets. Thermal-lined hood for maximum comfort.'
+  },
+  {
+    id: 'p12',
+    name: 'Breezy Cotton Capri Lounge Pants',
+    category: 'night-pants',
+    categoryName: 'Capris',
+    price: 549,
+    oldPrice: 699,
+    rating: '4.8',
+    sizes: ['S','M','L','XL'],
+    colors: ['#7A8B74','#F4EFEA'],
+    img: 'https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800&auto=format&fit=crop&q=80',
+    img2: 'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=800&auto=format&fit=crop&q=80',
+    badge: null,
+    inStock: true,
+    desc: 'Cropped cotton lounge pants with relaxed leg fit. Elastic drawstring waist for everyday ease.'
+  }
+];
+
+const TESTIMONIALS = [
+  {name:'Ananya Roy — Bengaluru', quote:'The Waverly pyjama set is the softest loungewear I own! Ordered two more colors right after receiving my first order.'},
+  {name:'Priya Malhotra — Mumbai', quote:'Finally oversized t-shirts with thick 220 GSM fabric that don’t lose shape after washing. 10/10 quality!'},
+  {name:'Kavya Sharma — Delhi', quote:'Fast delivery within 3 days to Delhi. The packaging was beautiful and fit is true to size.'}
+];
+
+const FAQS = [
+  {id:'faq-shipping', q:'How long does delivery take?', a:'Orders are dispatched within 24 hours. Metro cities receive orders in 2 to 4 days, and rest of India in 4 to 7 days.'},
+  {id:'faq-returns', q:'What is your returns policy?', a:'We offer a 7-day hassle-free return & exchange policy on all unworn items with tags intact.'},
+  {id:'faq-cod', q:'Do you offer Cash on Delivery (COD)?', a:'Yes! COD is available for orders up to ₹3,000 across 18,000+ PIN codes in India.'},
+  {id:'faq-washing', q:'How should I care for my 100% cotton garments?', a:'Machine wash cold with mild detergent inside out. Tumble dry low or line dry in shade to maintain color vibrancy.'}
+];
+
+/* ---------- STATE ---------- */
+let cart = [];
+let wishlist = [];
+let recentlyViewed = [];
+let visibleCount = 8;
+let activeFilters = {category:'',price:'',size:'',availability:''};
+let searchQuery = '';
+let couponDiscount = 0;
+let selectedColorInModal = {};
+let selectedSizeInModal = {};
+
+/* ---------- UTIL ---------- */
+function $(sel,ctx){return (ctx||document).querySelector(sel);}
+function $all(sel,ctx){return Array.from((ctx||document).querySelectorAll(sel));}
+function fmt(n){return '₹'+n.toLocaleString('en-IN');}
+function showToast(msg){
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(showToast._tm);
+  showToast._tm = setTimeout(()=>t.classList.remove('show'), 2200);
+}
+
+/* ---------- PAGE LOADER ---------- */
+window.addEventListener('load', ()=>{
+  setTimeout(()=> $('#pageLoader').classList.add('hide'), 500);
+});
+
+/* ---------- SCROLL PROGRESS + FLOAT TOP ---------- */
+window.addEventListener('scroll', ()=>{
+  const h = document.documentElement;
+  const pct = (h.scrollTop)/(h.scrollHeight - h.clientHeight) * 100;
+  $('#progressBar').style.width = pct + '%';
+  $('#floatTop').classList.toggle('show', h.scrollTop > 500);
+});
+
+/* ---------- THEME TOGGLE ---------- */
+$('#themeToggle').addEventListener('click', ()=>{
+  const root = document.documentElement;
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  $('#themeToggle').textContent = isDark ? '☾' : '☀';
+});
+
+/* ---------- HAMBURGER MENU ---------- */
+$('#hamburger').addEventListener('click', ()=>{
+  $('#navLinks').classList.toggle('open');
+});
+$all('#navLinks a').forEach(a=> a.addEventListener('click', ()=> $('#navLinks').classList.remove('open')));
+
+/* ---------- MARQUEE ---------- */
+(function initMarquee(){
+  const words = ['100% Combed Cotton','Free Shipping Over ₹999','7-Day Easy Returns','Soft Touch Modal Blends','Crafted in India'];
+  const track = $('#marqueeTrack');
+  const html = words.map(w=>`<span>${w}</span>`).join('');
+  track.innerHTML = html + html;
+})();
+
+/* ---------- RENDER CATEGORIES (ZERO IMAGE DEPENDENCY) ---------- */
+function renderCategories(){
+  $('#catGrid').innerHTML = CATEGORIES.map((c,i)=>`
+    <div class="cat-card reveal" data-cat="${c.id}" style="aspect-ratio:1.2;background:linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-soft) 100%);border-radius:var(--radius-m);padding:24px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--stone-light);position:relative;overflow:hidden;">
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--rose-light);letter-spacing:0.12em;">0${i+1} · Collection Edit</div>
+      <div>
+        <h3 style="font-size:22px;color:var(--ivory);margin-bottom:8px;">${c.name}</h3>
+        <p style="font-size:13px;color:var(--stone-light);line-height:1.5;margin-bottom:18px;">${c.desc}</p>
+        <button class="btn btn-rose" style="padding:10px 18px;font-size:10.5px;" data-shop-cat="${c.id}">Shop Edit →</button>
+      </div>
+    </div>
+  `).join('');
+  $all('[data-shop-cat]').forEach(b=> b.addEventListener('click', (e)=>{
+    activeFilters.category = e.target.dataset.shopCat;
+    $('#filterCategory').value = activeFilters.category;
+    document.getElementById('shop').scrollIntoView({behavior:'smooth'});
+    renderProducts();
+  }));
+  observeReveals();
+}
+
+/* ---------- FILTER OPTIONS ---------- */
+function initFilterOptions(){
+  const catSel = $('#filterCategory');
+  CATEGORIES.forEach(c=> catSel.insertAdjacentHTML('beforeend', `<option value="${c.id}">${c.name}</option>`));
+  
+  ['filterCategory','filterPrice','filterSize','filterAvailability'].forEach(id=>{
+    $('#'+id).addEventListener('change', (e)=>{
+      const key = id.replace('filter','').toLowerCase();
+      activeFilters[key] = e.target.value;
+      visibleCount = 8;
+      renderProducts();
+    });
+  });
+}
+
+/* ---------- FILTER + SEARCH LOGIC ---------- */
+function getFilteredProducts(){
+  return PRODUCTS.filter(p=>{
+    if(activeFilters.category && p.category !== activeFilters.category) return false;
+    if(activeFilters.size && !p.sizes.includes(activeFilters.size)) return false;
+    if(activeFilters.availability === 'in' && !p.inStock) return false;
+    if(activeFilters.availability === 'out' && p.inStock) return false;
+    if(activeFilters.price){
+      const [min,max] = activeFilters.price.split('-').map(Number);
+      if(p.price < min || p.price > max) return false;
+    }
+    if(searchQuery && !(p.name.toLowerCase().includes(searchQuery) || p.categoryName.toLowerCase().includes(searchQuery))) return false;
+    return true;
+  });
+}
+
+/* ---------- INLINE SVG GARMENT VECTOR GENERATOR (ZERO EXTERNAL IMAGE DEPENDENCY) ---------- */
+function getGarmentSVG(type, color){
+  const bg = color || '#C47B80';
+  
+  if(type==='hoodies-sweats'){
+    return `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 533" width="100%" height="100%"><rect width="400" height="533" fill="%23f3ebe7"/><path d="M110 140 C140 70 260 70 290 140 L350 180 L320 250 L280 220 L280 460 L120 460 L120 220 L80 250 L50 180 Z" fill="${encodeURIComponent(bg)}" stroke="%2329201e" stroke-width="3"/><path d="M150 120 C170 160 230 160 250 120 L200 180 Z" fill="%2329201e" opacity="0.25"/><rect x="150" y="340" width="100" height="70" rx="8" fill="%23ffffff" opacity="0.25" stroke="%2329201e" stroke-width="2"/><text x="200" y="280" font-family="sans-serif" font-size="18" font-weight="bold" fill="%23ffffff" text-anchor="middle" opacity="0.95">MAISON VELA</text></svg>`;
+  }
+  if(type==='leggings' || type==='joggers' || type==='night-pants'){
+    return `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 533" width="100%" height="100%"><rect width="400" height="533" fill="%23f3ebe7"/><path d="M130 110 L270 110 L290 460 L230 460 L200 230 L170 460 L110 460 Z" fill="${encodeURIComponent(bg)}" stroke="%2329201e" stroke-width="3"/><rect x="130" y="110" width="140" height="30" fill="%2329201e" opacity="0.35"/><text x="200" y="200" font-family="sans-serif" font-size="16" font-weight="bold" fill="%23ffffff" text-anchor="middle" opacity="0.95">MAISON VELA</text></svg>`;
+  }
+  // Default T-Shirt / Loungewear Vector
+  return `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 533" width="100%" height="100%"><rect width="400" height="533" fill="%23f3ebe7"/><path d="M130 100 C160 130 240 130 270 100 L345 145 L315 225 L275 195 L275 455 L125 455 L125 195 L85 225 L55 145 Z" fill="${encodeURIComponent(bg)}" stroke="%2329201e" stroke-width="3"/><path d="M150 100 C170 130 230 130 250 100" fill="none" stroke="%2329201e" stroke-width="3"/><text x="200" y="300" font-family="sans-serif" font-size="20" font-weight="bold" fill="%23ffffff" text-anchor="middle" opacity="0.95">MAISON VELA</text></svg>`;
+}
+
+/* ---------- RENDER PRODUCTS ---------- */
+function productCardHTML(p){
+  const badgeHTML = p.badge ? `<span class="badge-tag badge-${p.badge}">${p.badge==='new'?'New':p.badge==='sale'?'Sale':'Best Seller'}</span>` : '';
+  const isWished = wishlist.includes(p.id);
+  const svgImg = getGarmentSVG(p.category, p.colors[0]);
+  return `
+  <div class="product-card reveal in" data-id="${p.id}">
+    <div class="product-media">
+      ${badgeHTML}
+      <button class="wishlist-btn ${isWished?'active':''}" data-wish="${p.id}" aria-label="Toggle wishlist">${isWished?'♥':'♡'}</button>
+      <img src="${svgImg}" alt="${p.name}" loading="lazy">
+      <div class="product-quickactions">
+        <button data-quickview="${p.id}">Quick View</button>
+        <button data-addcart="${p.id}">${p.inStock?'Add to Bag':'Notify Me'}</button>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="cat-label">${p.categoryName}</div>
+      <h4>${p.name}</h4>
+      <div class="price-row">
+        <span class="price">${fmt(p.price)}</span>
+        ${p.oldPrice?`<span class="price-old">${fmt(p.oldPrice)}</span>`:''}
+        <span class="rating">★ ${p.rating}</span>
+      </div>
+      <div class="swatches">${p.colors.map((c,i)=>`<span class="swatch ${i===0?'selected':''}" style="background:${c}" data-swatch="${c}"></span>`).join('')}</div>
+    </div>
+  </div>`;
+}
+
+function renderProducts(){
+  const filtered = getFilteredProducts();
+  $('#resultsCount').textContent = filtered.length + ' styles';
+  const toShow = filtered.slice(0, visibleCount);
+  $('#productGrid').innerHTML = toShow.length ? toShow.map(productCardHTML).join('') : `<p style="grid-column:1/-1;color:var(--stone);padding:40px 0;text-align:center;">No styles match those filters. Try broadening your search.</p>`;
+  $('#loadMoreBtn').style.display = filtered.length > visibleCount ? 'inline-flex' : 'none';
+  bindProductEvents();
+}
+
+function bindProductEvents(){
+  $all('[data-wish]').forEach(b=> b.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    toggleWishlist(b.dataset.wish);
+  }));
+  $all('[data-addcart]').forEach(b=> b.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    const p = PRODUCTS.find(x=>x.id===b.dataset.addcart);
+    if(!p.inStock){ showToast('Added to restock alert list'); return; }
+    addToCart(p, p.sizes[0], p.colors[0], 1);
+  }));
+  $all('[data-quickview]').forEach(b=> b.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    openQuickView(b.dataset.quickview);
+  }));
+  $all('.product-card').forEach(card=> card.addEventListener('click', ()=>{
+    addRecentlyViewed(card.dataset.id);
+  }));
+}
+
+$('#loadMoreBtn').addEventListener('click', ()=>{ visibleCount += 8; renderProducts(); });
+
+/* ---------- WISHLIST ---------- */
+function toggleWishlist(id){
+  const idx = wishlist.indexOf(id);
+  if(idx>-1){ wishlist.splice(idx,1); showToast('Removed from saved items'); }
+  else { wishlist.push(id); showToast('Added to saved wishlist'); }
+  $('#wishBadge').textContent = wishlist.length;
+  renderProducts();
+  renderWishDrawer();
+}
+function renderWishDrawer(){
+  if(!wishlist.length){ $('#wishItemsWrap').innerHTML = `<div class="cart-empty">Your wishlist is empty.</div>`; return; }
+  $('#wishItemsWrap').innerHTML = wishlist.map(id=>{
+    const p = PRODUCTS.find(x=>x.id===id);
+    return `<div class="cart-item">
+      <img src="${p.img}" alt="${p.name}">
+      <div class="cart-item-info">
+        <h5>${p.name}</h5>
+        <div class="meta">${fmt(p.price)}</div>
+        <button class="btn btn-outline" style="padding:6px 12px;font-size:10px;" data-wish-add="${p.id}">Add to Bag</button>
+      </div>
+      <button class="remove-item" data-wish-remove="${p.id}">Remove</button>
+    </div>`;
+  }).join('');
+  $all('[data-wish-add]').forEach(b=> b.addEventListener('click', ()=>{
+    const p = PRODUCTS.find(x=>x.id===b.dataset.wishAdd);
+    addToCart(p, p.sizes[0], p.colors[0], 1);
+  }));
+  $all('[data-wish-remove]').forEach(b=> b.addEventListener('click', ()=> toggleWishlist(b.dataset.wishRemove)));
+}
+
+/* ---------- RECENTLY VIEWED ---------- */
+function addRecentlyViewed(id){
+  recentlyViewed = recentlyViewed.filter(x=>x!==id);
+  recentlyViewed.unshift(id);
+  recentlyViewed = recentlyViewed.slice(0,4);
+  renderRecentlyViewed();
+}
+function renderRecentlyViewed(){
+  const wrap = $('#recentlyViewedWrap');
+  if(!recentlyViewed.length){ wrap.style.display='none'; return; }
+  wrap.style.display='block';
+  $('#recentlyViewedGrid').innerHTML = recentlyViewed.map(id=>{
+    const p = PRODUCTS.find(x=>x.id===id);
+    return p ? productCardHTML(p) : '';
+  }).join('');
+}
+
+/* ---------- QUICK VIEW MODAL ---------- */
+function openQuickView(id){
+  const p = PRODUCTS.find(x=>x.id===id);
+  selectedSizeInModal[id] = selectedSizeInModal[id] || p.sizes[0];
+  selectedColorInModal[id] = selectedColorInModal[id] || p.colors[0];
+  addRecentlyViewed(id);
+  $('#modalContent').innerHTML = `
+    <button class="modal-close" id="modalCloseBtn" aria-label="Close">✕</button>
+    <div class="modal-img"><img src="${p.img2}" alt="${p.name}"></div>
+    <div class="modal-body">
+      <div class="cat-label" style="font-family:var(--font-mono);font-size:10px;color:var(--rose);text-transform:uppercase;font-weight:600;">${p.categoryName}</div>
+      <h3>${p.name}</h3>
+      <div class="price-row">
+        <span class="price" style="font-size:20px;">${fmt(p.price)}</span>
+        ${p.oldPrice?`<span class="price-old">${fmt(p.oldPrice)}</span>`:''}
+      </div>
+      <p class="desc">${p.desc}</p>
+      
+      <div class="option-label">Select Size</div>
+      <div class="size-options" id="modalSizes">
+        ${p.sizes.map(s=>`<div class="size-opt ${s===selectedSizeInModal[id]?'selected':''}" data-size="${s}">${s}</div>`).join('')}
+      </div>
+
+      <div class="option-label">Quantity</div>
+      <div class="qty-selector" id="modalQty">
+        <button data-qty="dec">−</button><span id="modalQtyVal">1</span><button data-qty="inc">+</button>
+      </div>
+
+      <button class="btn btn-rose" style="width:100%;" id="modalAddCart">${p.inStock?'Add Item to Bag':'Notify When Available'}</button>
+    </div>
+  `;
+  $('#modalBackdrop').classList.add('open');
+  let qty = 1;
+  $('#modalCloseBtn').addEventListener('click', ()=> $('#modalBackdrop').classList.remove('open'));
+  $all('#modalSizes .size-opt').forEach(el=> el.addEventListener('click', ()=>{
+    selectedSizeInModal[id] = el.dataset.size;
+    $all('#modalSizes .size-opt').forEach(x=>x.classList.remove('selected'));
+    el.classList.add('selected');
+  }));
+  $('#modalQty').addEventListener('click', (e)=>{
+    const act = e.target.dataset.qty;
+    if(act==='inc') qty++;
+    if(act==='dec') qty = Math.max(1, qty - 1);
+    $('#modalQtyVal').textContent = qty;
+  });
+  $('#modalAddCart').addEventListener('click', ()=>{
+    if(!p.inStock){ showToast('Added to restock alert list'); $('#modalBackdrop').classList.remove('open'); return; }
+    addToCart(p, selectedSizeInModal[id], selectedColorInModal[id], qty);
+    $('#modalBackdrop').classList.remove('open');
+  });
+}
+$('#modalBackdrop').addEventListener('click', (e)=>{ if(e.target.id==='modalBackdrop') $('#modalBackdrop').classList.remove('open'); });
+
+/* ---------- CART ENGINE ---------- */
+function addToCart(p, size, color, qty){
+  const existing = cart.find(c=> c.id===p.id && c.size===size && c.color===color);
+  if(existing){ existing.qty += qty; }
+  else { cart.push({id:p.id, name:p.name, img:p.img, price:p.price, size, color, qty}); }
+  renderCart();
+  openCart();
+  showToast(p.name + ' added to Bag');
+}
+function renderCart(){
+  const count = cart.reduce((s,c)=>s+c.qty, 0);
+  $('#cartBadge').textContent = count;
+  if(!cart.length){ $('#cartItemsWrap').innerHTML = `<div class="cart-empty">Your Bag is empty.<br><br><a href="#shop" class="btn btn-outline" onclick="document.getElementById('cartClose').click()">Shop New Drop</a></div>`; }
+  else {
+    $('#cartItemsWrap').innerHTML = cart.map((c,i)=>`
+      <div class="cart-item">
+        <img src="${c.img}" alt="${c.name}">
+        <div class="cart-item-info">
+          <h5>${c.name}</h5>
+          <div class="meta">Size: ${c.size} · ${fmt(c.price)}</div>
+          <div class="cart-item-qty">
+            <button data-dec="${i}">−</button><span>${c.qty}</span><button data-inc="${i}">+</button>
+            <button class="remove-item" data-remove="${i}">Remove</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+  const subtotal = cart.reduce((s,c)=> s + (c.price * c.qty), 0);
+  const total = Math.max(0, subtotal - couponDiscount);
+  $('#cartTotal').textContent = fmt(total);
+  $all('[data-inc]').forEach(b=> b.addEventListener('click', ()=>{ cart[b.dataset.inc].qty++; renderCart(); }));
+  $all('[data-dec]').forEach(b=> b.addEventListener('click', ()=>{
+    const idx = b.dataset.dec; cart[idx].qty--;
+    if(cart[idx].qty <= 0) cart.splice(idx,1);
+    renderCart();
+  }));
+  $all('[data-remove]').forEach(b=> b.addEventListener('click', ()=>{ cart.splice(b.dataset.remove,1); renderCart(); }));
+}
+function openCart(){ $('#cartDrawer').classList.add('open'); $('#overlayDim').classList.add('open'); }
+function closeCart(){ $('#cartDrawer').classList.remove('open'); $('#wishDrawer').classList.remove('open'); $('#overlayDim').classList.remove('open'); }
+$('#cartOpen').addEventListener('click', openCart);
+$('#cartClose').addEventListener('click', closeCart);
+$('#wishlistOpenNav').addEventListener('click', ()=>{ renderWishDrawer(); $('#wishDrawer').classList.add('open'); $('#overlayDim').classList.add('open'); });
+$('#wishClose').addEventListener('click', closeCart);
+$('#overlayDim').addEventListener('click', closeCart);
+$('#clearCartBtn').addEventListener('click', ()=>{ cart = []; couponDiscount = 0; renderCart(); showToast('Bag cleared'); });
+
+$('#applyCoupon').addEventListener('click', ()=>{
+  const code = $('#couponInput').value.trim().toUpperCase();
+  const subtotal = cart.reduce((s,c)=> s + (c.price * c.qty), 0);
+  if(code === 'VELA10'){
+    couponDiscount = Math.round(subtotal * 0.1);
+    showToast('Coupon VELA10 applied — 10% Off');
+  } else if(code){
+    showToast('Invalid Coupon Code');
+    couponDiscount = 0;
+  }
+  renderCart();
+});
+
+/* ---------- WHATSAPP B2C CHECKOUT ---------- */
+const WHATSAPP_NUMBER = '919080296479';
+$('#checkoutBtn').addEventListener('click', ()=>{
+  if(!cart.length){ showToast('Your Bag is empty'); return; }
+  const subtotal = cart.reduce((s,c)=> s + (c.price * c.qty), 0);
+  const total = Math.max(0, subtotal - couponDiscount);
+  let msg = `Hi Maison Vela! I'd like to place an order from your online store:%0A%0A`;
+  cart.forEach((c, i)=>{
+    msg += `${i+1}. *${c.name}* (Size: ${c.size}) x${c.qty} — ${fmt(c.price * c.qty)}%0A`;
+  });
+  if(couponDiscount > 0){ msg += `%0ADiscount (VELA10): -${fmt(couponDiscount)}%0A`; }
+  msg += `%0ATotal Amount: ${fmt(total)}%0A%0APlease confirm delivery timeline & payment details.`;
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+  window.open(url, '_blank');
+});
+
+/* ---------- SEARCH ---------- */
+$('#searchOpen').addEventListener('click', ()=>{ $('#searchOverlay').classList.add('open'); $('#searchInput').focus(); });
+$('#searchClose').addEventListener('click', ()=> $('#searchOverlay').classList.remove('open'));
+$('#searchOverlay').addEventListener('click', (e)=>{ if(e.target.id==='searchOverlay') $('#searchOverlay').classList.remove('open'); });
+$('#searchInput').addEventListener('input', (e)=>{
+  const q = e.target.value.trim().toLowerCase();
+  if(!q){ $('#searchResults').innerHTML=''; return; }
+  const results = PRODUCTS.filter(p=> p.name.toLowerCase().includes(q) || p.categoryName.toLowerCase().includes(q));
+  $('#searchResults').innerHTML = results.length ? results.map(p=>`
+    <div class="search-result-item" data-goto="${p.id}"><span>${p.name}</span><span>${fmt(p.price)}</span></div>
+  `).join('') : `<div class="search-result-item" style="color:var(--stone);">No styles found</div>`;
+  $all('[data-goto]').forEach(el=> el.addEventListener('click', ()=>{
+    searchQuery = q; $('#searchOverlay').classList.remove('open');
+    document.getElementById('shop').scrollIntoView({behavior:'smooth'});
+    renderProducts();
+  }));
+});
+
+/* ---------- TESTIMONIALS SLIDER ---------- */
+let testiIndex = 0, testiTimer;
+function renderTestimonials(){
+  $('#testiWrap').innerHTML = TESTIMONIALS.map((t,i)=>`
+    <div class="testi-slide ${i===0?'active':''}" data-i="${i}">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"${t.quote}"</p>
+      <div class="testi-name">${t.name}</div>
+    </div>
+  `).join('') + `<div class="testi-dots">${TESTIMONIALS.map((_,i)=>`<span data-dot="${i}" class="${i===0?'active':''}"></span>`).join('')}</div>`;
+  $all('[data-dot]').forEach(d=> d.addEventListener('click', ()=> setTesti(Number(d.dataset.dot))));
+  testiTimer = setInterval(()=> setTesti((testiIndex+1)%TESTIMONIALS.length), 5000);
+}
+function setTesti(i){
+  testiIndex = i;
+  $all('.testi-slide').forEach(s=> s.classList.toggle('active', Number(s.dataset.i)===i));
+  $all('[data-dot]').forEach(d=> d.classList.toggle('active', Number(d.dataset.dot)===i));
+}
+
+/* ---------- STATS COUNTER ---------- */
+function animateCounters(){
+  $all('.stat-num').forEach(el=>{
+    const target = Number(el.dataset.count);
+    let cur = 0;
+    const step = Math.max(1, Math.round(target/80));
+    const tick = ()=>{
+      cur += step;
+      if(cur >= target){ el.textContent = target.toLocaleString('en-IN'); return; }
+      el.textContent = cur.toLocaleString('en-IN');
+      requestAnimationFrame(tick);
+    };
+    tick();
+  });
+}
+let countersAnimated = false;
+
+/* ---------- FAQ ACCORDION ---------- */
+function renderFAQ(){
+  $('#faqList').innerHTML = FAQS.map((f,i)=>`
+    <div class="faq-item" id="${f.id}" data-i="${i}">
+      <button class="faq-q" data-faq-toggle="${i}">${f.q}<span class="plus">+</span></button>
+      <div class="faq-a"><p>${f.a}</p></div>
+    </div>
+  `).join('');
+  $all('[data-faq-toggle]').forEach(btn=> btn.addEventListener('click', ()=>{
+    const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-a');
+    const isOpen = item.classList.contains('open');
+    $all('.faq-item').forEach(f=>{ f.classList.remove('open'); f.querySelector('.faq-a').style.maxHeight=null; });
+    if(!isOpen){ item.classList.add('open'); answer.style.maxHeight = answer.scrollHeight+'px'; }
+  }));
+}
+
+/* ---------- FORM VALIDATION HELPERS ---------- */
+function validateForm(formEl, rules){
+  let valid = true;
+  rules.forEach(r=>{
+    const field = $('#'+r.id);
+    const errEl = field.parentElement.querySelector('.error-msg');
+    const val = field.value.trim();
+    let ok = true;
+    if(r.required && !val) ok = false;
+    if(ok && r.type==='email' && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) ok = false;
+    field.classList.toggle('invalid', !ok);
+    if(errEl) errEl.classList.toggle('show', !ok);
+    if(!ok) valid = false;
+  });
+  return valid;
+}
+function wireForm(formId, rules, successId){
+  const form = $('#'+formId);
+  if(!form) return;
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    if(validateForm(form, rules)){
+      $('#'+successId).classList.add('show');
+      form.reset();
+      setTimeout(()=> $('#'+successId).classList.remove('show'), 4000);
+    }
+  });
+}
+
+wireForm('contactForm', [{id:'ctName',required:true},{id:'ctEmail',required:true,type:'email'},{id:'ctMsg',required:true}], 'ctSuccess');
+
+/* ---------- RIPPLE EFFECT ---------- */
+document.addEventListener('click', (e)=>{
+  const btn = e.target.closest('.btn');
+  if(!btn) return;
+  const rect = btn.getBoundingClientRect();
+  const ripple = document.createElement('span');
+  ripple.className='ripple';
+  ripple.style.left = (e.clientX-rect.left)+'px';
+  ripple.style.top = (e.clientY-rect.top)+'px';
+  btn.appendChild(ripple);
+  setTimeout(()=> ripple.remove(), 650);
+});
+
+/* ---------- REVEAL ON SCROLL ---------- */
+function observeReveals(){
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){
+        en.target.classList.add('in');
+        if(en.target.classList.contains('stats-band') || en.target.closest('.stats-band')){
+          if(!countersAnimated){ animateCounters(); countersAnimated = true; }
+        }
+        io.unobserve(en.target);
+      }
+    });
+  }, {threshold:0.15});
+  $all('.reveal:not(.in)').forEach(el=> io.observe(el));
+}
+
+const statsObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{ if(en.isIntersecting && !countersAnimated){ animateCounters(); countersAnimated = true; statsObserver.disconnect(); } });
+},{threshold:0.3});
+
+/* ---------- INIT ---------- */
+document.addEventListener('DOMContentLoaded', ()=>{
+  renderCategories();
+  initFilterOptions();
+  renderProducts();
+  renderCart();
+  renderTestimonials();
+  renderFAQ();
+  observeReveals();
+  const sb = document.querySelector('.stats-band');
+  if(sb) statsObserver.observe(sb);
+});
+
+})();
+</script>
+</body>
+</html>

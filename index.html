@@ -381,8 +381,16 @@ section{padding:90px 0;}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);}
 .faq-a p{padding:0 4px 22px;font-size:13.5px;color:var(--stone);line-height:1.7;}
 
-/* ============ FORMS ============ */
+/* ============ FORMS & CONTACT ============ */
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:stretch;}
+@media(max-width:850px){.contact-grid{grid-template-columns:1fr;gap:24px;}}
+.contact-list{display:flex;flex-direction:column;gap:18px;margin-bottom:24px;}
+.contact-list li{display:flex;align-items:flex-start;gap:14px;font-size:14px;}
+.contact-list .ic{font-size:20px;color:var(--rose);margin-top:2px;}
+.contact-list h5{font-size:12px;font-family:var(--font-mono);text-transform:uppercase;color:var(--stone);margin-bottom:2px;}
+
 .form-card{background:var(--ivory-2);padding:40px;border-radius:var(--radius-m);border:1px solid var(--stone-light);}
+@media(max-width:640px){.form-card{padding:28px 20px !important;}}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 @media(max-width:600px){.form-grid{grid-template-columns:1fr;}}
 .field{display:flex;flex-direction:column;gap:6px;}
@@ -396,6 +404,14 @@ section{padding:90px 0;}
 .error-msg.show{display:block;}
 .form-success{display:none;background:var(--success);color:#fff;padding:14px 18px;border-radius:var(--radius-s);font-size:13px;margin-top:16px;}
 .form-success.show{display:block;}
+
+.stylist-btn{
+  width:fit-content;margin:0 auto;padding:14px 28px;
+  white-space:normal;text-align:center;line-height:1.4;display:inline-flex;
+}
+@media(max-width:640px){
+  .stylist-btn{width:100%;display:flex;justify-content:center;padding:15px 20px;}
+}
 
 /* ============ FOOTER ============ */
 footer{background:var(--ivory-2);padding:80px 0 30px;border-top:1px solid var(--stone-light);}
@@ -658,7 +674,7 @@ footer{background:var(--ivory-2);padding:80px 0 30px;border-top:1px solid var(--
       <div class="form-card" style="display:flex;flex-direction:column;justify-content:center;text-align:center;padding:40px;background:var(--charcoal);color:var(--ivory);">
         <h3 style="color:var(--rose-light);font-size:26px;margin-bottom:14px;">Need Help Picking Your Size?</h3>
         <p style="color:var(--stone-light);font-size:14px;line-height:1.6;margin-bottom:24px;">Message our stylists directly on WhatsApp for real-time sizing advice and stock availability.</p>
-        <a href="https://wa.me/919080296479?text=Hi%20Maison%20Vela%2C%20I'd%20like%20help%20choosing%20my%20size" target="_blank" class="btn btn-rose" style="width:fit-content;margin:0 auto;">Chat with Stylist on WhatsApp</a>
+        <a href="https://wa.me/919080296479?text=Hi%20Maison%20Vela%2C%20I'd%20like%20help%20choosing%20my%20size" target="_blank" class="btn btn-rose stylist-btn">Chat with Stylist on WhatsApp</a>
       </div>
     </div>
   </div>
